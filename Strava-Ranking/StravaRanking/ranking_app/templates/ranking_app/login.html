@@ -1,0 +1,8 @@
+{%extends 'ranking_app/base.html'%}
+{% load socialaccount %}
+
+{%block content%}
+<body>
+<a class="link" href="{% provider_login_url 'strava' %}">Login with Strava</a>
+</body>
+{%endblock%}

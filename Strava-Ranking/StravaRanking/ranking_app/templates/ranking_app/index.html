@@ -1,0 +1,20 @@
+{%extends 'ranking_app/base.html'%}
+{% load socialaccount %}
+
+{%block content%}
+  <div class="title"><h1>Strava Rankings</h1></div>
+  <div class="subtitle"><p>A simple tool for creating custom rankings between friends</p></div>
+  <a class="link" href="/ranking/logout">logout</a> 
+  <p>Welcome, {{firstname}} !</p>
+  <a class="link" href="/ranking/create">Create Ranking</a>
+  <br>
+  <br>
+  <table>
+  <tr>
+    <th>My Rankings</th>
+  </tr>
+  {%for ranking in rankings%}
+  <tr><td><a class="tableLink" href={{ranking.get_absolute_url}}>{{ranking.name}}</a> </td></tr>
+  {%endfor%}
+  </table>
+{%endblock%}

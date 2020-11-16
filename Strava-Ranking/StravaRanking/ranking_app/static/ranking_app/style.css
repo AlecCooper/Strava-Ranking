@@ -1,0 +1,64 @@
+
+body {
+    color: #eee;
+    background: #121212;
+  }
+
+.sans-serif{
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+div {
+    font-family:sans-serif;
+  }
+
+.link{
+  color:#ffb026;
+}
+
+.title h1{
+    color:#eee;
+    text-align: center;
+    font-weight: normal;
+}
+.title h3{
+  color:#eee;
+  text-align: center;
+  font-weight: normal;
+}
+
+.subtitle p{
+  text-align:center;
+}
+
+table, th, td {
+    border: 1px solid #262626;
+    border-collapse: collapse;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
+  }
+
+tr:nth-child(odd) {background-color: #121212;}
+tr:nth-child(even){background-color: #262626;}
+
+th{
+  background-color: #121212;
+  padding:5px;
+  padding-left:15px;
+  text-align:left;
+}
+
+td{
+    padding:15px;
+}
+
+.tableLink{
+  color:#eee;
+  text-decoration: none;
+}
+.tableLink:hover {
+    color:#ffb026;
+    text-decoration: underline;
+  }

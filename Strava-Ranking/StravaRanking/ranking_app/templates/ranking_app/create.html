@@ -1,0 +1,9 @@
+{%extends 'ranking_app/base.html'%}
+
+{%block content%}
+<a class="link" href="/ranking/{{ranking.name}}">Back to Ranking</a>
+<form action='/ranking/create' method='POST'>{% csrf_token %}
+{{form.as_p}}
+<input type='submit' value='Save'/>
+</form>
+{%endblock%}

@@ -1,0 +1,33 @@
+{%extends 'ranking_app/base.html'%}
+
+{%block content%}
+<a class="link" href="/">Back to Rankings</a>
+<a class="link" href="/ranking/{{ranking.name}}/edit">Edit Ranking<a>
+<div class="title"><h1>{{ranking.name}} Rankings</h1></div>
+<table>
+  <tr>
+    <th>Athlete</th>
+    <th>Position</th>
+  </tr>
+  {%for rank in ranked%}
+  <tr>
+    <td><a class="tableLink" href="/ranking/{{ranking.name}}/profiles/{{rank.0}}">{{rank.2}} {{rank.3}}</a></td>
+    <td>{{rank.1}}</td>
+  </tr>
+  {%endfor%}
+</table>
+<div class="title"><h3>Segments</h3></div>
+<table>
+  <tr>
+    <th>Segment</th>
+    <th>Distance</th>
+  </tr>
+  {%for segment in segments%}
+  <tr>
+    <td><a class="tableLink" href="{{segment.get_absolute_url}}">{{segment.name}}</a></td>
+    <td>{{segment.formated_distance}}</td>
+  </tr>
+  {%endfor%}
+</table>
+{%endblock%}
+

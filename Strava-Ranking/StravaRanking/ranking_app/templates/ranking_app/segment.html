@@ -1,0 +1,23 @@
+{%extends 'ranking_app/base.html'%}
+
+{%block content%}
+<a class="link" href="/ranking/{{ranking.name}}">Back to Ranking</a>
+
+<a class="link" href="{{segment.url}}">View Segment on Strava<a>
+<h2>Rankings of {{segment.name}}</h2>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Time</th>
+    <th>Position</th>
+  </tr>
+  {%for rank in ranked%}
+  <tr>
+    <td><a class="tableLink" href="/ranking/{{ranking.name}}/profiles/{{rank.0}}">{{rank.4}} {{rank.5}}</td>
+    <td>{{rank.3}}</td>
+    <td>{{rank.2}}</td>
+    
+  </tr>
+  {%endfor%}
+</table>
+{%endblock%}
