@@ -34,7 +34,7 @@ def index(request):
     extra_data = social_account.extra_data
     first_name = extra_data["firstname"]
 
-    context = {'rankings':rankings, 'firstname':firstname}
+    context = {'rankings':rankings, 'firstname':first_name}
 
     return HttpResponse(template.render(context, request))
 
